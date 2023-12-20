@@ -10,6 +10,7 @@
       align-items: center;
       height: 100vh;
       background-color: #f0f0f0;
+      overflow: hidden;
     }
     .birthday-card {
       background-color: #fff;
@@ -17,6 +18,8 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       padding: 30px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     .birthday-message {
       font-family: 'Arial', sans-serif;
@@ -32,12 +35,29 @@
       box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
       animation: rotateImage 6s linear infinite;
     }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ff6384;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: confetti 3s ease-in-out infinite;
+    }
     @keyframes rotateImage {
       from {
         transform: rotate(0deg);
       }
       to {
         transform: rotate(360deg);
+      }
+    }
+    @keyframes confetti {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(500vh) rotate(720deg);
       }
     }
   </style>
@@ -47,6 +67,13 @@
     <h1 class="birthday-message">Happy Birthday!</h1>
     <img class="birthday-img" src="birthday-img.jfif" alt="Birthday Cake Image">
     <p>Wishing you a fantastic day filled with joy and laughter!</p>
+    <!-- Confetti Animation -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <!-- Add more confetti elements as needed -->
   </div>
 </body>
 </html>
