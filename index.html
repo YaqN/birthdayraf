@@ -35,6 +35,13 @@
       box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
       animation: rotateImage 6s linear infinite;
     }
+    .confetti-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
     .confetti {
       position: absolute;
       width: 10px;
@@ -68,12 +75,14 @@
     <img class="birthday-img" src="birthday-img.jfif" alt="Birthday Cake Image">
     <p>Wishing you a fantastic day filled with joy and laughter!</p>
     <!-- Confetti Animation -->
-    <div class="confetti"></div>
-    <div class="confetti"></div>
-    <div class="confetti"></div>
-    <div class="confetti"></div>
-    <div class="confetti"></div>
-    <!-- Add more confetti elements as needed -->
+    <div class="confetti-container">
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <div class="confetti"></div>
+      <!-- Add more confetti elements as needed -->
+    </div>
   </div>
 </body>
 </html>
